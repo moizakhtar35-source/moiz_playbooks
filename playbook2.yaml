@@ -5,4 +5,9 @@
   vars: 
     user: hum
   tasks:
+    - name: creating user {{ user }}
+      user:
+        name: "{{ user }}"
+        comment:"{{ user }}@aol.com"
+        state: present 
     
