@@ -1,8 +1,15 @@
 ---
 - name: creating a file on nasir
   hosts: nasir:
-  gathe_facts: no
+  gather_facts: no
   vars:
     user: moiz
   tasks:
+    - name: creating a file with my name
+      file:
+        path: "/tmp/{{ user }}_logs.txt"
+        owner: moiz
+        group: moiz
+        mode: '0755'
+        state: touch
 
