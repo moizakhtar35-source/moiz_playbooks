@@ -1,0 +1,8 @@
+---
+- name: adding moiz user
+  hosts: sikandar
+  gather_facts: no
+  vars: 
+    user: hum
+  tasks:
+    
